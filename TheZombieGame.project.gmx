@@ -6,34 +6,50 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_joey</sprite>
-    <sprite>sprites\spr_james</sprite>
-    <sprite>sprites\spr_mohammad</sprite>
-    <sprite>sprites\spr_anish</sprite>
-    <sprite>sprites\spr_allen</sprite>
-    <sprite>sprites\spr_kris</sprite>
-    <sprite>sprites\spr_nishant</sprite>
-    <sprite>sprites\spr_nikhil</sprite>
-    <sprite>sprites\spr_kwasi</sprite>
-    <sprite>sprites\spr_sean</sprite>
-    <sprite>sprites\spr_jordan</sprite>
-    <sprite>sprites\spr_wilson</sprite>
-    <sprite>sprites\spr_luis</sprite>
-    <sprite>sprites\spr_sofa_down1</sprite>
-    <sprite>sprites\spr_sofa_down2</sprite>
-    <sprite>sprites\spr_sofa_left1</sprite>
-    <sprite>sprites\spr_sofa_left2</sprite>
-    <sprite>sprites\spr_sofa_right1</sprite>
-    <sprite>sprites\spr_sofa_right2</sprite>
-    <sprite>sprites\spr_sofa_up1</sprite>
-    <sprite>sprites\spr_sofa_up2</sprite>
-    <sprite>sprites\spr_carpet_blue</sprite>
-    <sprite>sprites\spr_interiorwall_greypost</sprite>
-    <sprite>sprites\spr_interiorwall_grey</sprite>
-    <sprite>sprites\spr_zombier</sprite>
-    <sprite>sprites\spr_zombied</sprite>
-    <sprite>sprites\spr_zombiel</sprite>
-    <sprite>sprites\spr_zombieu</sprite>
+    <sprites name="Players">
+      <sprites name="Joey">
+        <sprite>sprites\spr_joey_left</sprite>
+        <sprite>sprites\spr_joey_down</sprite>
+        <sprite>sprites\spr_joey_attack_down</sprite>
+        <sprite>sprites\spr_joey_attack_left</sprite>
+        <sprite>sprites\spr_joey_right</sprite>
+        <sprite>sprites\spr_joey_up</sprite>
+      </sprites>
+      <sprite>sprites\spr_james</sprite>
+      <sprite>sprites\spr_anish</sprite>
+      <sprite>sprites\spr_kris</sprite>
+      <sprite>sprites\spr_allen</sprite>
+      <sprite>sprites\spr_nishant</sprite>
+      <sprite>sprites\spr_nikhil</sprite>
+      <sprite>sprites\spr_kwasi</sprite>
+      <sprite>sprites\spr_jordan</sprite>
+      <sprite>sprites\spr_mohammad</sprite>
+      <sprite>sprites\spr_wilson</sprite>
+      <sprite>sprites\spr_luis</sprite>
+      <sprite>sprites\spr_sean</sprite>
+    </sprites>
+    <sprites name="Furniture and walls">
+      <sprite>sprites\spr_sofa_down1</sprite>
+      <sprite>sprites\spr_sofa_left1</sprite>
+      <sprite>sprites\spr_sofa_left2</sprite>
+      <sprite>sprites\spr_sofa_right1</sprite>
+      <sprite>sprites\spr_sofa_right2</sprite>
+      <sprite>sprites\spr_sofa_up1</sprite>
+      <sprite>sprites\spr_sofa_up2</sprite>
+      <sprite>sprites\spr_carpet_blue</sprite>
+      <sprite>sprites\spr_sofa_down2</sprite>
+      <sprite>sprites\spr_interiorwall_greypost</sprite>
+      <sprite>sprites\spr_interiorwall_grey_v</sprite>
+      <sprite>sprites\spr_table_bottom</sprite>
+      <sprite>sprites\spr_table_top</sprite>
+      <sprite>sprites\spr_tvstand</sprite>
+    </sprites>
+    <sprites name="Enemies">
+      <sprite>sprites\spr_zombiel</sprite>
+      <sprite>sprites\spr_zombieu</sprite>
+      <sprite>sprites\spr_zombier</sprite>
+      <sprite>sprites\spr_zombied</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_carpet_blue</background>
@@ -42,20 +58,32 @@
   <scripts name="scripts">
     <script>scripts\scr_get_input.gml</script>
     <script>scripts\scr_move_state.gml</script>
+    <script>scripts\scr_attack_state.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_interiorwall_grey</object>
-    <object>objects\obj_sofal1</object>
-    <object>objects\obj_sofal2</object>
-    <object>objects\obj_sofau1</object>
-    <object>objects\obj_sofau2</object>
-    <object>objects\obj_sofar1</object>
-    <object>objects\obj_sofar2</object>
-    <object>objects\obj_interiorwall_greypost</object>
-    <object>objects\obj_joey</object>
-    <object>objects\obj_collision</object>
-    <object>objects\obj_zombie1</object>
     <object>objects\obj_grid</object>
+    <objects name="Players">
+      <object>objects\obj_joey</object>
+    </objects>
+    <objects name="Furniture and walls">
+      <object>objects\obj_interiorwall_grey</object>
+      <object>objects\obj_tvstand</object>
+      <object>objects\obj_table_top</object>
+      <object>objects\obj_interiorwall_greypost</object>
+      <object>objects\obj_collision</object>
+      <object>objects\obj_table_bottom</object>
+      <objects name="Couches">
+        <object>objects\obj_sofau1</object>
+        <object>objects\obj_sofal1</object>
+        <object>objects\obj_sofar1</object>
+        <object>objects\obj_sofal2</object>
+        <object>objects\obj_sofau2</object>
+        <object>objects\obj_sofar2</object>
+      </objects>
+    </objects>
+    <objects name="Enemies">
+      <object>objects\obj_zombie1</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

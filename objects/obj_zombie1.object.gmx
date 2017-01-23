@@ -27,9 +27,43 @@
             <kind>1</kind>
             <string>image_speed = .1;
 spd = .1;
-spd += random_range(1.4, 2.4);
+spd += random_range(.65, 1.4);
 hspd = 0;
 vspd = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if instance_exists(obj_collision)
+{
+i = instance_nearest(x,y,obj_collision)
+
+if (obj_zombie1.y&gt;i.y)
+{
+depth=-1
+}
+if (obj_zombie1.y&lt;i.y)
+{
+depth=1
+}}
 </string>
           </argument>
         </arguments>
@@ -87,10 +121,7 @@ if (place_meeting(x+hspd,y, obj_collision)) {
     }
     hspd = 0;
 }
-with(obj_zombie1){
-    other.x += 5;
-    other.y += 5;
-}
+
 
 // Move horizontally
 
@@ -104,10 +135,7 @@ if (place_meeting(x,y+vspd, obj_collision)) {
     }
     vspd = 0;
 }
-with(obj_zombie1){
-    other.x += 5;
-    other.y += 5;
-}
+
 
 // Move vertically
 
@@ -124,12 +152,32 @@ if(place_meeting(x+hspd, y+vspd,  obj_collision))
     hspd = 0;
     vspd = 0;
 }
-with(obj_zombie1){
-    other.x += 5;
-    other.y += 5;
-}
 
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_zombie1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Collision with other zombie
 </string>
           </argument>
         </arguments>
