@@ -30,8 +30,10 @@
     <sprite>sprites\spr_carpet_blue</sprite>
     <sprite>sprites\spr_interiorwall_greypost</sprite>
     <sprite>sprites\spr_interiorwall_grey</sprite>
-    <sprite>sprites\spr_zombie2</sprite>
-    <sprite>sprites\spr_zombie1</sprite>
+    <sprite>sprites\spr_zombier</sprite>
+    <sprite>sprites\spr_zombied</sprite>
+    <sprite>sprites\spr_zombiel</sprite>
+    <sprite>sprites\spr_zombieu</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_carpet_blue</background>
@@ -53,6 +55,7 @@
     <object>objects\obj_joey</object>
     <object>objects\obj_collision</object>
     <object>objects\obj_zombie1</object>
+    <object>objects\obj_grid</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
