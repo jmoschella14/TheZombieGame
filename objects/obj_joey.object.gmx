@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_lifeform_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>///Player
 event_inherited();
+damage = 1;
+hp = 10
 vspd=0;
 spd=4;
 hspd=0;
@@ -42,7 +44,7 @@ sp = 4;
 xaxis= 0;
 yaxis = 0;
 dir = 0;
-friction = 0.4
+attacked = false;
 </string>
           </argument>
         </arguments>
@@ -65,7 +67,8 @@ friction = 0.4
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_collision)
+            <string>///event
+if instance_exists(obj_collision)
 {
 i = instance_nearest(x,y,obj_collision)
 
@@ -180,6 +183,30 @@ if (hp &lt;= 0) instance_destroy();
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_lifeform_parent">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///parent
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="7">
       <action>
         <libid>1</libid>
@@ -200,6 +227,7 @@ if (hp &lt;= 0) instance_destroy();
             <string>///change back to move state
 if (state == scr_attack_state) {
 state = scr_move_state;
+attacked=false;
 }
 </string>
           </argument>

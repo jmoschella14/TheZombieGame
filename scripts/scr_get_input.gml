@@ -19,3 +19,4 @@ dash_key = gamepad_button_check_pressed(0,gp_face2);
 attack_key = gamepad_button_check_pressed(0,gp_face3);
 }
 
+

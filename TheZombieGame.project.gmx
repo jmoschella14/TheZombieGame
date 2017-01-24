@@ -50,6 +50,7 @@
       <sprite>sprites\spr_zombier</sprite>
       <sprite>sprites\spr_zombied</sprite>
     </sprites>
+    <sprite>sprites\spr_damage</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_carpet_blue</background>
@@ -84,6 +85,8 @@
     <objects name="Enemies">
       <object>objects\obj_zombie1</object>
     </objects>
+    <object>objects\obj_lifeform_parent</object>
+    <object>objects\obj_damage</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
