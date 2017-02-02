@@ -13,6 +13,16 @@ sprite_index = spr_joey_attack_left;
 hspd = 0;
 break;
 
+case spr_joey_right:
+sprite_index = spr_joey_attack_right;
+hspd = 0;
+break;
+
+case spr_joey_up: 
+sprite_index = spr_joey_attack_up;
+vspd = 0;
+break;
+
 //when other directions are done, add them same as the others
 }
 
