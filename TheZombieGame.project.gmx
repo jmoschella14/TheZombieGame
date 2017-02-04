@@ -8,16 +8,23 @@
   <sprites name="sprites">
     <sprites name="Players">
       <sprites name="Joey">
-        <sprite>sprites\spr_joey_left</sprite>
-        <sprite>sprites\spr_joey_down</sprite>
+        <sprite>sprites\spr_joey0_left</sprite>
+        <sprite>sprites\spr_joey0_down</sprite>
         <sprite>sprites\spr_joey_attack_down</sprite>
         <sprite>sprites\spr_joey_attack_left</sprite>
-        <sprite>sprites\spr_joey_right</sprite>
-        <sprite>sprites\spr_joey_up</sprite>
+        <sprite>sprites\spr_joey0_right</sprite>
+        <sprite>sprites\spr_joey0_up</sprite>
         <sprite>sprites\spr_joey_attack_right</sprite>
         <sprite>sprites\spr_joey_attack_up</sprite>
+        <sprite>sprites\spr_joey_down</sprite>
+        <sprite>sprites\spr_joey_left</sprite>
+        <sprite>sprites\spr_joey_right</sprite>
+        <sprite>sprites\spr_joey_up</sprite>
       </sprites>
-      <sprite>sprites\spr_james</sprite>
+      <sprites name="James">
+        <sprite>sprites\spr_james_down</sprite>
+        <sprite>sprites\spr_james</sprite>
+      </sprites>
       <sprite>sprites\spr_anish</sprite>
       <sprite>sprites\spr_kris</sprite>
       <sprite>sprites\spr_allen</sprite>
@@ -39,6 +46,7 @@
       <sprite>sprites\spr_sofa_up1</sprite>
       <sprite>sprites\spr_sofa_up2</sprite>
       <sprite>sprites\spr_carpet_blue</sprite>
+      <sprite>sprites\spr_gravel</sprite>
       <sprite>sprites\spr_sofa_down2</sprite>
       <sprite>sprites\spr_interiorwall_greypost</sprite>
       <sprite>sprites\spr_interiorwall_grey_v</sprite>
@@ -50,6 +58,7 @@
       <sprite>sprites\spr_zombiel</sprite>
       <sprite>sprites\spr_zombieu</sprite>
       <sprite>sprites\spr_zombier</sprite>
+      <sprite>sprites\spr_zombiedead</sprite>
       <sprite>sprites\spr_zombied</sprite>
     </sprites>
     <sprite>sprites\spr_damage</sprite>
@@ -60,9 +69,14 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_get_input.gml</script>
-    <script>scripts\scr_move_state.gml</script>
-    <script>scripts\scr_attack_state.gml</script>
-    <script>scripts\script3.gml</script>
+    <script>scripts\scr_dead_enemy_state.gml</script>
+    <script>scripts\scr_enemy_stall_state.gml</script>
+    <scripts name="player">
+      <script>scripts\scr_attack_state.gml</script>
+      <script>scripts\scr_move_state.gml</script>
+    </scripts>
+    <script>scripts\script4.gml</script>
+    <script>scripts\scr_enemy_idle_state.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_grid</object>
@@ -71,6 +85,7 @@
     </objects>
     <objects name="Furniture and walls">
       <object>objects\obj_interiorwall_grey</object>
+      <object>objects\obj_gravel</object>
       <object>objects\obj_tvstand</object>
       <object>objects\obj_table_top</object>
       <object>objects\obj_interiorwall_greypost</object>

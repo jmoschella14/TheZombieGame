@@ -172,8 +172,12 @@ if(place_meeting(x+hspd, y+vspd,  obj_collision))
     vspd = 0;
 }
 
-
-
+if (hp &lt;= 0) {
+sprite_index = spr_zombiedead
+spd = 0;
+hspd = 0;
+vspd = 0;
+}
 </string>
           </argument>
         </arguments>

@@ -51,7 +51,8 @@ hp = 3;
           <argument>
             <kind>1</kind>
             <string>if (hp &lt;= 0) {
-instance_destroy();
+sprite_index = spr_zombiedead;
+depth = -3;
 }
 </string>
           </argument>
