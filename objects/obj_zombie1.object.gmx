@@ -101,7 +101,6 @@ depth=1
             <string>//directon sprite
 event_inherited();
 
-if (hp &gt; 0) {
 if instance_exists(obj_joey) {
 direction = round(point_direction(x,y,obj_joey.x,obj_joey.y) / 90) * 90;
 }
@@ -172,42 +171,9 @@ if(place_meeting(x+hspd, y+vspd,  obj_collision))
     hspd = 0;
     vspd = 0;
 }
-}
+
 if (hp &lt;= 0) {
-switch (sprite_index) {
-case spr_zombiel: 
-sprite_index = spr_zombiedeadl;
-depth = 3;
-spd = 0;
-hspd = 0;
-vspd = 0;
-break;
-
-case spr_zombier:
-sprite_index = spr_zombiedeadr;
-depth = 3;
-spd = 0;
-hspd = 0;
-vspd = 0;
-break;
-
-case spr_zombieu:
-sprite_index = spr_zombiedeadl;
-depth = 3;
-spd = 0;
-hspd = 0;
-vspd = 0;
-break;
-
-case spr_zombied: 
-sprite_index = spr_zombiedeadr;
-depth = 3;
-spd = 0;
-hspd = 0;
-vspd = 0;
-break;
-
-}
+instance_destroy();
 }
 </string>
           </argument>

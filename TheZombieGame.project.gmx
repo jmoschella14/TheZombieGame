@@ -48,18 +48,22 @@
         <sprite>sprites\spr_sofa_down2</sprite>
         <sprite>sprites\spr_sofa_up1</sprite>
       </sprites>
-      <sprite>sprites\spr_carpet_blue</sprite>
-      <sprite>sprites\spr_interiorwall_greypost</sprite>
-      <sprite>sprites\spr_interiorwall_grey_v</sprite>
-      <sprite>sprites\spr_table_bottom</sprite>
-      <sprite>sprites\spr_table_top</sprite>
-      <sprite>sprites\spr_tvstand</sprite>
       <sprites name="Outside">
         <sprite>sprites\spr_railing</sprite>
+        <sprite>sprites\spr_railingnocoll</sprite>
         <sprite>sprites\spr_gravel</sprite>
         <sprite>sprites\spr_rail</sprite>
         <sprite>sprites\spr_rails</sprite>
         <sprite>sprites\spr_stonestairs</sprite>
+      </sprites>
+      <sprites name="Inside">
+        <sprite>sprites\spr_tvstand</sprite>
+        <sprite>sprites\spr_interiorwall_grey_v</sprite>
+        <sprite>sprites\spr_carpet_blue</sprite>
+        <sprite>sprites\spr_interiorwall_greypost</sprite>
+        <sprite>sprites\spr_table_bottom</sprite>
+        <sprite>sprites\spr_table_top</sprite>
+        <sprite>sprites\spr_frontdoor</sprite>
       </sprites>
     </sprites>
     <sprites name="Enemies">
@@ -109,6 +113,7 @@
         </objects>
       </objects>
       <object>objects\obj_stonestairs</object>
+      <object>objects\obj_railnocoll</object>
       <object>objects\obj_rail</object>
       <object>objects\obj_rails</object>
       <object>objects\obj_railing</object>
@@ -120,6 +125,7 @@
     <object>objects\obj_lifeform_parent</object>
     <object>objects\obj_collision</object>
     <object>objects\obj_damage</object>
+    <object>objects\obj_frontdoor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
